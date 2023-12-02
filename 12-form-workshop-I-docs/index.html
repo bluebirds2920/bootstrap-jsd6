@@ -16,136 +16,170 @@
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
     crossorigin="anonymous"></script>
-<script src="./script.js" ></script>
-
+  <script defer src="./script.js" crossorigin="anonymous"></script>
+<!-- Option 1: Include in HTML -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 </head>
 
 <body class="color-pinky vh-100">
   <div class="d-flex flex-column gap-3 justify-content-center align-items-center  h-100">
-    <div class="d-grid gap-3 text-center col-lg-5 col-md-8 col-sm-10 col-10">
+    <div class="d-grid gap-3  col-lg-5 col-md-8 col-sm-10 col-10">
       <button class="btn color-purple text-white btn-lg shadow" type="button">
         <strong>Try it free 7 days</strong> then $20/mo. thereafter
       </button>
-
+      
+<form class="needs-validation"  novalidate >
       <div class="card p-5">
+        <div class="TestAlerter alert alert-success alert-dismissible tester-alert d-none" id="TestAlerter">
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+          <i class="bi bi-check-circle-fill"></i>
+          <strong>Success!</strong> This alert successful or positive action.
+        </div>
         <div class="row row-cols-1">
           <div class="col">
             <div class="form-floating mb-3">
-              <input type="text" class="form-control " id="Firstname" placeholder="First Name" />
-              <label for="Firstname">First Name</label>
+              
+              
+              <input type="text" class="form-control " id="FirstName" placeholder="First Name" required/>
+              <label for="FirstName">First Name</label>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Looks not good!
+              </div>
+              
+            
             </div>
           </div>
           <div class="col">
             <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="Lastname" placeholder="Last Name" />
+              <input type="text" class="form-control" id="Lastname" placeholder="Last Name" required/>
               <label for="Lastname">Last Name</label>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Looks not good!
+              </div>
             </div>
           </div>
           <div class="col">
             <div class="form-floating mb-3">
-              <input type="email" class="form-control" id="EmailAddress" placeholder="Email Address" />
+              <input type="email" class="form-control" id="EmailAddress" placeholder="Email Address" required/>
               <label for="EmailAddress">Email Address</label>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Looks not good!
+              </div>
             </div>
           </div>
           <div class="col">
             <div class="form-floating mb-3">
-              <input type="password" class="form-control" id="Password" placeholder="Password" />
+              <input type="password" class="form-control" id="Password" placeholder="Password" required/>
               <label for="Password">Password</label>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Looks not good!
+              </div>
             </div>
           </div>
           <div class="col">
             <div class="d-grid gap-3 text-center">
-              <button class="btn btn-success btn-lg" type="button">
+              <button class="btn btn-success btn-lg" type="submit">
                 CLAIM YOUR FREE TRIAL
               </button>
               <p>
                 By clicking the button you are agreeing to our
-                <a href="#" class="link-danger text-decoration-none fw-bold">Tearms and Services
+                <a href="#" class="link-danger text-decoration-none fw-bold" data-bs-toggle="modal"
+                  data-bs-target="#exampleModal">Terms and Services
                 </a>
               </p>
             </div>
           </div>
         </div>
       </div>
+
+    </form>
     </div>
   </div>
 
-  <div class="container pb-5">
-<div class="d-flex align-items-center justify-content-center ">
-<div class="card ">
-  <div class="card-body">
-
-  
-  <form class="row g-3 needs-validation" novalidate>
-    <div class="col-md-4">
-      <label for="validationCustom01" class="form-label">First name</label>
-      <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
-    </div>
-    <div class="col-md-4">
-      <label for="validationCustom02" class="form-label">Last name</label>
-      <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
-    </div>
-    <div class="col-md-4">
-      <label for="validationCustomUsername" class="form-label">Username</label>
-      <div class="input-group has-validation">
-        <span class="input-group-text" id="inputGroupPrepend">@</span>
-        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-        <div class="invalid-feedback">
-          Please choose a username.
+  <!-- Modal-Terms-And-Service -->
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Terms and Services</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, explicabo autem rerum ad sit impedit
+          molestias iusto quos ipsa, nulla inventore, delectus quasi incidunt voluptas aperiam. Suscipit debitis
+          inventore quae natus nam, dignissimos architecto quibusdam voluptate! Corrupti repellat consectetur facere id
+          fuga enim reiciendis nihil dicta optio, neque veritatis quod! Facere ad explicabo voluptates voluptatum quo
+          eos reprehenderit cupiditate? Tenetur, fugit dolores corporis culpa debitis quo. Modi, illum et? Laborum
+          consectetur laudantium necessitatibus itaque molestiae. Voluptates, reiciendis accusamus dicta est quas illo
+          eius sint porro totam, quibusdam necessitatibus earum sit, eos libero cumque placeat dolor! Accusantium,
+          consequuntur rerum eaque dignissimos illum dolor a doloremque deserunt velit iste recusandae ullam incidunt
+          voluptate culpa sit dolore, pariatur ex modi fuga. Ut sint error fugit obcaecati, assumenda blanditiis velit
+          quibusdam ab, ad illo ipsum minus autem atque. Maiores reprehenderit officia alias! Sequi dicta illo quisquam
+          adipisci cupiditate sit nobis distinctio porro amet ab accusamus, aperiam nulla pariatur molestias quam rem.
+          Velit autem eveniet blanditiis, quam error, sit temporibus modi voluptas, obcaecati sint nobis ut earum in vel
+          tempora consectetur labore. Dignissimos quibusdam error maxime aliquid, hic aliquam ad reprehenderit officiis
+          cum consequatur expedita nesciunt deleniti impedit repellendus excepturi dolorum. Officia ducimus maiores
+          deserunt repellendus vel totam unde veniam beatae sit culpa! Atque dolore quas asperiores neque? Nihil impedit
+          sunt a accusamus exercitationem labore doloremque provident modi quos dolores, illum velit obcaecati
+          distinctio eaque! Eius recusandae possimus, culpa ipsam dolorem at ab! Corporis obcaecati optio provident eos
+          iusto. Fuga in eligendi nisi ab cum libero nihil, odit, numquam mollitia alias, magni dicta doloremque
+          molestias a officia esse? Repellat veniam quo fuga in, libero sit, molestiae officiis non doloremque tenetur
+          facilis minus excepturi voluptatibus vitae consectetur eligendi eaque reiciendis fugiat est rem suscipit
+          adipisci necessitatibus. Fugiat, culpa quidem? Error eveniet incidunt sequi cupiditate mollitia vero quaerat
+          doloremque iusto id dolorem animi fugiat nesciunt veniam, eos laborum delectus beatae voluptatum possimus
+          repellat molestiae fugit inventore temporibus. Totam nisi error quis provident possimus! Alias eligendi
+          temporibus ipsa aperiam dignissimos! Fuga consectetur minima, commodi eum corporis rem saepe quas ab assumenda
+          repudiandae a eius laborum totam maiores magni ratione quos incidunt sequi suscipit porro, ullam doloremque.
+          Repellendus sunt fugiat quisquam dolorem nihil dolorum earum ad exercitationem ipsa non tenetur dolor
+          dignissimos, veritatis ut dolores adipisci cupiditate quia eum. Veritatis tempore praesentium doloribus
+          tenetur quae sapiente ipsum atque voluptas molestiae velit minima asperiores quibusdam maiores ab eveniet,
+          veniam, odio voluptatem aspernatur est earum, labore voluptates. Ducimus asperiores dolores a delectus cumque
+          maxime nesciunt, esse in odio excepturi nihil voluptas magni illum aspernatur commodi eligendi tenetur
+          praesentium sunt nemo? Quasi iste porro quo. Adipisci doloremque sapiente in? Eos recusandae, facilis
+          temporibus nihil earum, officia debitis repellat molestiae amet asperiores cum voluptate esse accusantium
+          magni quos mollitia nulla! Minima fugiat in aspernatur omnis iste. Assumenda id sed odit aliquam totam earum
+          eius. Distinctio ipsam id, quos quasi facilis dolores iste velit aliquid quia commodi recusandae saepe
+          expedita? At quas consectetur accusantium ut, molestiae, neque ipsa porro veritatis architecto repellat sint
+          itaque?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
-    <div class="col-md-6">
-      <label for="validationCustom03" class="form-label">City</label>
-      <input type="text" class="form-control" id="validationCustom03" required>
-      <div class="invalid-feedback">
-        Please provide a valid city.
-      </div>
-    </div>
-    <div class="col-md-3">
-      <label for="validationCustom04" class="form-label">State</label>
-      <select class="form-select" id="validationCustom04" required>
-        <option selected disabled value="">Choose...</option>
-        <option>...</option>
-      </select>
-      <div class="invalid-feedback">
-        Please select a valid state.
-      </div>
-    </div>
-    <div class="col-md-3">
-      <label for="validationCustom05" class="form-label">Zip</label>
-      <input type="text" class="form-control" id="validationCustom05" required>
-      <div class="invalid-feedback">
-        Please provide a valid zip.
-      </div>
-    </div>
-    <div class="col-12">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-        <label class="form-check-label" for="invalidCheck">
-          Agree to terms and conditions
-        </label>
-        <div class="invalid-feedback">
-          You must agree before submitting.
-        </div>
-      </div>
-    </div>
-    <div class="col-12">
-      <button class="btn btn-primary" type="submit">Submit form</button>
-    </div>
-  </form>
-  </div>  
-</div>
-</div>
-
-   
   </div>
+
+
+  <!-- Modal-Terms-And-Service -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 
 </html>
